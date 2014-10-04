@@ -21,16 +21,23 @@ module.exports = {
 
   afterCreate: function(event, callback){
     console.log(event);
+    var timeDeltaThreshold = 1000; // miliseconds
+
     sails.models.event
     .find()
     .where({
+      // Around the same time
       dateSent: {
         '<=': new Date(event.dateSent),
-        '>=': new Date(+new Date(event.dateSent) - 10000)
+        '>=': new Date(+new Date(event.dateSent) - timeDeltaThreshold)
       },
-      id: {
+      id: { // Not the same event
         '!': [event.id]
       },
+      nymi: { // Not the same user
+        '!': [event.nymi]
+      },
+      // Is the same gesture
       gesture: event.gesture
     })
     .exec(function(err, results){
