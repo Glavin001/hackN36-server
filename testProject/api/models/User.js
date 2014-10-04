@@ -14,7 +14,7 @@ module.exports = {
     firstName: {
       type: 'string'
     },
-    secondName: {
+    lastName: {
       type: 'string'
     },
     email: {

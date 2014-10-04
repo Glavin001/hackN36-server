@@ -30,26 +30,26 @@ module.exports = {
     var linkedin = Linkedin.init(myAccessToken);
 
     linkedin.people.invite({
-          "recipients": {
-              "values": [{
-                  "person": {
-                      "_path": "/people/email=mistryrn@mcmaster.ca",
-                      "first-name": "Rakesh",
-                      "last-name": "Mistry"
-                  }
-              }]
-          },
-          "subject": "Invitation to connect.",
-          "body": "Say yes!",
-          "item-content": {
-              "invitation-request": {
-                  "connect-type": "friend"
-              }
+      "recipients": {
+        "values": [{
+          "person": {
+            "_path": "/people/email=mistryrn@mcmaster.ca",
+            "first-name": "Rakesh",
+            "last-name": "Mistry"
           }
-      }, function(err, data) {
-          console.log('INVITED?', err, data);
-          callback();
-      });
+        }]
+      },
+      "subject": "Invitation to connect.",
+      "body": "Say yes!",
+      "item-content": {
+        "invitation-request": {
+          "connect-type": "friend"
+        }
+      }
+    }, function(err, data) {
+      console.log('INVITED?', err, data);
+      callback();
+    });
   }
 
 };

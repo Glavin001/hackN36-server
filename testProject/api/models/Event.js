@@ -11,6 +11,9 @@ module.exports = {
     dateSent: {
       type: 'date'
     },
+    gesture: {
+      type: 'string'
+    },
     nymi: {
       type: 'string'
     }
@@ -27,7 +30,8 @@ module.exports = {
       },
       id: {
         '!': [event.id]
-      }
+      },
+      gesture: event.gesture
     })
     .exec(function(err, results){
       if(results.length == 1){
