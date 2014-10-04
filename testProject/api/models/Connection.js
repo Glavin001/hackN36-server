@@ -51,7 +51,7 @@ module.exports = {
                   "recipients": {
                     "values": [{
                       "person": {
-                        "_path": "/people/email=" + user2.email,
+                        "_path": "/people/email=" + user2.emailAddress,
                         "first-name": user2.firstName,
                         "last-name": user2.lastName
                       }

@@ -9,19 +9,28 @@ module.exports = {
 
   attributes: {
     nymi: {
-      type: 'string'
+      type: 'string',
+      unique: true
     },
     firstName: {
-      type: 'string'
+      type: 'string',
+      unique: true,
+      required: true
     },
     lastName: {
-      type: 'string'
+      type: 'string',
+      unique: true,
+      required: true
     },
-    email: {
-      type: 'string'
+    emailAddress: {
+      type: 'string',
+      unique: true,
+      required: true
     },
     linkedinAccessToken: {
-      type: 'string'
+      type: 'string',
+      unique: true,
+      required: true
     }
   }
 };
