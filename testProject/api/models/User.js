@@ -8,12 +8,20 @@
 module.exports = {
 
   attributes: {
-    name: {
+    nymi: {
       type: 'string'
     },
-    nymi: {
+    firstName: {
+      type: 'string'
+    },
+    secondName: {
+      type: 'string'
+    },
+    email: {
+      type: 'string'
+    },
+    linkedinAccessToken: {
       type: 'string'
     }
   }
 };
-
